@@ -1,0 +1,7 @@
+{
+  "mean_naive_penalty": 0.29657918923806886,
+  "min_naive_penalty": 0.27208858038623845,
+  "max_naive_penalty": 0.3077914453329897,
+  "mean_paradox_aware_reduction": 0.2149121523117708,
+  "mean_attack_loss_reduction": 0.9348443144443062
+}
