@@ -15,7 +15,7 @@
     "ddos_service_loss": 0.6823316275749598,
     "max_utilization": 0.5017144320404116,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.0813774350421808,
+    "queueing_curve_cost": 1.5856297074315842,
     "converged": true,
     "iterations": 819
   },
@@ -35,7 +35,7 @@
     "ddos_service_loss": 2.51,
     "max_utilization": 1.0,
     "gateway_share": 1.0,
-    "queueing_curve_cost": 98.06288374665034,
+    "queueing_curve_cost": 2.3624718119605004,
     "converged": true,
     "iterations": 1
   },
@@ -55,7 +55,7 @@
     "ddos_service_loss": 1.0224192266346048,
     "max_utilization": 0.75177884311368,
     "gateway_share": 0.5,
-    "queueing_curve_cost": 5.072270150919643,
+    "queueing_curve_cost": 1.749934803992631,
     "converged": true,
     "iterations": 296
   },
@@ -75,7 +75,7 @@
     "ddos_service_loss": 0.6832188488944339,
     "max_utilization": 0.5023668006576719,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.0838985768534015,
+    "queueing_curve_cost": 1.5883295345461799,
     "converged": true,
     "iterations": 586
   },
@@ -95,7 +95,7 @@
     "ddos_service_loss": 0.6823316275749598,
     "max_utilization": 0.5017144320404116,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.0813774350421808,
+    "queueing_curve_cost": 1.5856297074315842,
     "converged": true,
     "iterations": 819
   },
@@ -115,7 +115,7 @@
     "ddos_service_loss": 0.7026312782864225,
     "max_utilization": 0.5166406457988401,
     "gateway_share": 0.03096157717413281,
-    "queueing_curve_cost": 2.146176983835401,
+    "queueing_curve_cost": 1.5860441791760205,
     "converged": true,
     "iterations": 1699
   },
@@ -135,7 +135,7 @@
     "ddos_service_loss": 0.8523673823498477,
     "max_utilization": 0.6267407223160644,
     "gateway_share": 0.25,
-    "queueing_curve_cost": 2.909990019312775,
+    "queueing_curve_cost": 1.625332582064538,
     "converged": true,
     "iterations": 512
   },
@@ -155,7 +155,7 @@
     "ddos_service_loss": 0.6884694984919242,
     "max_utilization": 0.5062275724205325,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.087813029994452,
+    "queueing_curve_cost": 1.5914837226465484,
     "converged": true,
     "iterations": 61
   },
@@ -175,7 +175,7 @@
     "ddos_service_loss": 1.36,
     "max_utilization": 1.0,
     "gateway_share": 0.985630076944328,
-    "queueing_curve_cost": 97.39105021078188,
+    "queueing_curve_cost": 2.353283364165599,
     "converged": true,
     "iterations": 13
   },
@@ -195,7 +195,7 @@
     "ddos_service_loss": 1.0268779311711473,
     "max_utilization": 0.755057302331726,
     "gateway_share": 0.5,
-    "queueing_curve_cost": 5.086151720966936,
+    "queueing_curve_cost": 1.760968188331329,
     "converged": true,
     "iterations": 25
   },
@@ -215,7 +215,7 @@
     "ddos_service_loss": 0.70448,
     "max_utilization": 0.518,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.097971363546065,
+    "queueing_curve_cost": 1.5977955789854221,
     "converged": true,
     "iterations": 54
   },
@@ -235,7 +235,7 @@
     "ddos_service_loss": 0.6884694984919242,
     "max_utilization": 0.5062275724205325,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.087813029994452,
+    "queueing_curve_cost": 1.5914837226465484,
     "converged": true,
     "iterations": 61
   },
@@ -255,7 +255,7 @@
     "ddos_service_loss": 0.7041729341261211,
     "max_utilization": 0.5177742162692067,
     "gateway_share": 0.02906046347766506,
-    "queueing_curve_cost": 2.1478591454109015,
+    "queueing_curve_cost": 1.59176814143945,
     "converged": true,
     "iterations": 1819
   },
@@ -275,7 +275,7 @@
     "ddos_service_loss": 0.8577229341436027,
     "max_utilization": 0.6306786280467667,
     "gateway_share": 0.25,
-    "queueing_curve_cost": 2.9193092087490156,
+    "queueing_curve_cost": 1.6335904391624632,
     "converged": true,
     "iterations": 39
   },
@@ -295,7 +295,7 @@
     "ddos_service_loss": 0.6992657667334156,
     "max_utilization": 0.5141660049510408,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.0993261771579865,
+    "queueing_curve_cost": 1.6000415869484292,
     "converged": true,
     "iterations": 39
   },
@@ -315,7 +315,7 @@
     "ddos_service_loss": 1.331635820269461,
     "max_utilization": 0.9791439854922507,
     "gateway_share": 0.9413822396056566,
-    "queueing_curve_cost": 70.63487194597761,
+    "queueing_curve_cost": 2.280609803861298,
     "converged": true,
     "iterations": 201
   },
@@ -335,7 +335,7 @@
     "ddos_service_loss": 1.0385143039959734,
     "max_utilization": 0.7636134588205687,
     "gateway_share": 0.5,
-    "queueing_curve_cost": 5.11535711130985,
+    "queueing_curve_cost": 1.7694660819794286,
     "converged": true,
     "iterations": 49
   },
@@ -355,7 +355,7 @@
     "ddos_service_loss": 0.7291263881984212,
     "max_utilization": 0.536122344263545,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.1180698583887776,
+    "queueing_curve_cost": 1.6041683078526163,
     "converged": true,
     "iterations": 241
   },
@@ -375,7 +375,7 @@
     "ddos_service_loss": 0.6992657667334156,
     "max_utilization": 0.5141660049510408,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.0993261771579865,
+    "queueing_curve_cost": 1.6000415869484292,
     "converged": true,
     "iterations": 39
   },
@@ -395,7 +395,7 @@
     "ddos_service_loss": 0.7479210865108847,
     "max_utilization": 0.5499419753756505,
     "gateway_share": 0.08192535429344132,
-    "queueing_curve_cost": 2.283837286823744,
+    "queueing_curve_cost": 1.5992638895998201,
     "converged": true,
     "iterations": 1593
   },
@@ -415,7 +415,7 @@
     "ddos_service_loss": 0.8688784675270587,
     "max_utilization": 0.6388812261228372,
     "gateway_share": 0.25,
-    "queueing_curve_cost": 2.93411458694602,
+    "queueing_curve_cost": 1.6420646925325024,
     "converged": true,
     "iterations": 57
   },
@@ -435,7 +435,7 @@
     "ddos_service_loss": 0.6811253927457763,
     "max_utilization": 0.500827494666012,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.07797185503351,
+    "queueing_curve_cost": 1.5821337255044354,
     "converged": true,
     "iterations": 1495
   },
@@ -455,7 +455,7 @@
     "ddos_service_loss": 1.36,
     "max_utilization": 1.0,
     "gateway_share": 0.993965234503116,
-    "queueing_curve_cost": 97.78003388635116,
+    "queueing_curve_cost": 2.3576205170019695,
     "converged": true,
     "iterations": 2
   },
@@ -475,7 +475,7 @@
     "ddos_service_loss": 1.021227758160329,
     "max_utilization": 0.7509027633531831,
     "gateway_share": 0.5,
-    "queueing_curve_cost": 5.073123636463163,
+    "queueing_curve_cost": 1.7510562658469193,
     "converged": true,
     "iterations": 401
   },
@@ -495,7 +495,7 @@
     "ddos_service_loss": 0.6883543996300425,
     "max_utilization": 0.506142940904443,
     "gateway_share": 6.8198529009332325e-06,
-    "queueing_curve_cost": 2.088304638612004,
+    "queueing_curve_cost": 1.591545652594261,
     "converged": true,
     "iterations": 1013
   },
@@ -515,7 +515,7 @@
     "ddos_service_loss": 0.6811253927457763,
     "max_utilization": 0.500827494666012,
     "gateway_share": 0.0,
-    "queueing_curve_cost": 2.07797185503351,
+    "queueing_curve_cost": 1.5821337255044354,
     "converged": true,
     "iterations": 1495
   },
@@ -535,7 +535,7 @@
     "ddos_service_loss": 0.6953885365645543,
     "max_utilization": 0.5113151004151135,
     "gateway_share": 0.021736974869013267,
-    "queueing_curve_cost": 2.1228931548028642,
+    "queueing_curve_cost": 1.5825486323472318,
     "converged": true,
     "iterations": 1862
   },
@@ -555,7 +555,7 @@
     "ddos_service_loss": 0.851189318805137,
     "max_utilization": 0.6258744991214242,
     "gateway_share": 0.25,
-    "queueing_curve_cost": 2.908649864512901,
+    "queueing_curve_cost": 1.624041489469382,
     "converged": true,
     "iterations": 858
   }

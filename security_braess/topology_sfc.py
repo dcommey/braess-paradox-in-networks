@@ -308,11 +308,11 @@ def summarize_evaluations(evaluations: list[PolicyEvaluation]) -> list[dict[str,
 
 
 def queueing_curve_cost(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
-    """Evaluate a flow under a convex queueing-style delay curve.
+    """Evaluate a flow under a convex BPR-style delay curve.
 
     This is a robustness check rather than a second equilibrium solve. It asks
     whether the policy-induced flow remains harmful when affine delays are
-    replaced by a steeper M/M/1-like service curve.
+    replaced by a steeper nonlinear congestion curve.
     """
 
     total = 0.0
@@ -324,8 +324,8 @@ def queueing_curve_cost(model: MultiServiceModel, result: MCEquilibriumResult) -
         for resource_name in path.resources:
             resource = model.resources[resource_name]
             load = result.loads.get(resource_name, 0.0)
-            utilization = min(0.98, load / resource.capacity)
-            cost += resource.base_delay + resource.slope * utilization / max(1e-6, 1.0 - utilization)
+            utilization = min(1.5, load / resource.capacity)
+            cost += resource.base_delay + resource.slope * utilization * (1.0 + 0.15 * utilization**4)
         total += flow * cost
     return total / model.total_demand
 
