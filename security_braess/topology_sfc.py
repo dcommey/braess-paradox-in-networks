@@ -262,6 +262,36 @@ def expected_attack_loss(model: MultiServiceModel, result: MCEquilibriumResult) 
     return max(losses, default=0.0)
 
 
+def weighted_attack_loss(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
+    """Expected loss under a utilization/exposure-weighted attacker.
+
+    The targeted proxy uses the single best target. This variant gives each
+    resource probability proportional to utilization times exposure, then
+    averages the same per-resource loss expression.
+    """
+
+    weights: dict[str, float] = {}
+    losses: dict[str, float] = {}
+    for name, resource in model.resources.items():
+        load = result.loads.get(name, 0.0)
+        utilization = load / resource.capacity
+        share = load / model.total_demand
+        overload = max(0.0, utilization - 1.0)
+        weights[name] = max(0.0, utilization * resource.exposure)
+        losses[name] = (
+            resource.risk
+            * resource.exposure
+            * share
+            * share
+            * model.total_demand
+            * (1.0 + overload)
+        )
+    total_weight = sum(weights.values())
+    if total_weight <= 0.0:
+        return 0.0
+    return sum(weights[name] / total_weight * losses[name] for name in model.resources)
+
+
 def worst_ddos_loss(model: MultiServiceModel, result: MCEquilibriumResult) -> tuple[str, float, float]:
     target, resource = max(
         model.resources.items(),
@@ -294,6 +324,7 @@ def summarize_evaluations(evaluations: list[PolicyEvaluation]) -> list[dict[str,
                 "security_braess_ratio": evaluation.sbr,
                 "risk_concentration": risk_concentration_index(evaluation.model, evaluation.result),
                 "expected_attack_loss": expected_attack_loss(evaluation.model, evaluation.result),
+                "weighted_attack_loss": weighted_attack_loss(evaluation.model, evaluation.result),
                 "ddos_target": target,
                 "ddos_affected_share": affected_share,
                 "ddos_service_loss": ddos_loss,
