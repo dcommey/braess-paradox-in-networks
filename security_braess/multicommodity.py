@@ -151,6 +151,56 @@ def solve_multicommodity_equilibrium(
     return _make_result(model, flows, iterations=iteration, converged=converged, gap=gap)
 
 
+def solve_nonlinear_equilibrium(
+    model: MultiServiceModel,
+    path_caps: Mapping[str, float] | None = None,
+    *,
+    beta: float = 0.15,
+    power: int = 4,
+    max_iter: int = 10_000,
+    tolerance: float = 1e-5,
+) -> MCEquilibriumResult:
+    """Solve Wardrop equilibrium under a convex BPR-style delay curve.
+
+    Resource delay is ``b + a*x*(1 + beta*x**power)``, where ``x=y/u``.
+    Frank--Wolfe remains applicable because the corresponding Beckmann
+    potential is convex.  A monotone bisection search computes the exact
+    one-dimensional minimizer to numerical precision on each FW segment.
+    """
+
+    if beta < 0 or power < 1:
+        raise ValueError("beta must be non-negative and power must be positive")
+    caps = _normalize_caps(model, path_caps)
+    flows = _all_or_nothing(model, None, caps)
+    converged = False
+    gap = inf
+
+    for iteration in range(1, max_iter + 1):
+        costs = _nonlinear_path_costs(model, flows, beta=beta, power=power)
+        search = _all_or_nothing(model, costs, caps)
+        direction = {name: search[name] - flows[name] for name in model.path_names}
+        gap = sum((flows[name] - search[name]) * costs[name] for name in model.path_names)
+        scale = max(1.0, sum(flows[name] * costs[name] for name in model.path_names))
+        if gap <= tolerance * scale:
+            converged = True
+            break
+        step = _nonlinear_line_search(model, flows, direction, beta=beta, power=power)
+        if step <= EPSILON:
+            converged = True
+            break
+        flows = {
+            name: _clean_float(flows[name] + step * direction[name])
+            for name in model.path_names
+        }
+    else:
+        iteration = max_iter
+
+    return _make_nonlinear_result(
+        model, flows, beta=beta, power=power, iterations=iteration,
+        converged=converged, gap=gap,
+    )
+
+
 def solve_system_optimum(
     model: MultiServiceModel,
     path_caps: Mapping[str, float] | None = None,
@@ -328,6 +378,121 @@ def _affine_line_search(
     if denominator <= EPSILON:
         return 1.0 if numerator < 0 else 0.0
     return min(1.0, max(0.0, -numerator / denominator))
+
+
+def _nonlinear_delay(resource: Resource, load: float, *, beta: float, power: int) -> float:
+    x = max(0.0, load / resource.capacity)
+    return resource.base_delay + resource.slope * x * (1.0 + beta * x**power)
+
+
+def _nonlinear_path_costs(
+    model: MultiServiceModel,
+    flows: Mapping[str, float],
+    *,
+    beta: float,
+    power: int,
+) -> dict[str, float]:
+    loads = model.resource_loads(flows)
+    return {
+        path.name: sum(
+            _nonlinear_delay(model.resources[name], loads[name], beta=beta, power=power)
+            for name in path.resources
+        )
+        for path in model.paths
+    }
+
+
+def _nonlinear_potential(
+    model: MultiServiceModel,
+    loads: Mapping[str, float],
+    *,
+    beta: float,
+    power: int,
+) -> float:
+    total = 0.0
+    for name, resource in model.resources.items():
+        y = max(0.0, loads[name])
+        u = resource.capacity
+        total += (
+            resource.base_delay * y
+            + resource.slope * y * y / (2.0 * u)
+            + resource.slope * beta * y ** (power + 2) / ((power + 2) * u ** (power + 1))
+        )
+    return total
+
+
+def _nonlinear_line_search(
+    model: MultiServiceModel,
+    flows: Mapping[str, float],
+    direction: Mapping[str, float],
+    *,
+    beta: float,
+    power: int,
+) -> float:
+    loads = model.resource_loads(flows)
+    load_direction = {name: 0.0 for name in model.resources}
+    for path in model.paths:
+        for resource_name in path.resources:
+            load_direction[resource_name] += direction[path.name]
+
+    def derivative(step: float) -> float:
+        return sum(
+            _nonlinear_delay(
+                resource,
+                loads[name] + step * load_direction[name],
+                beta=beta,
+                power=power,
+            ) * load_direction[name]
+            for name, resource in model.resources.items()
+        )
+
+    if derivative(0.0) >= 0.0:
+        return 0.0
+    if derivative(1.0) <= 0.0:
+        return 1.0
+    lo, hi = 0.0, 1.0
+    for _ in range(60):
+        mid = 0.5 * (lo + hi)
+        if derivative(mid) <= 0.0:
+            lo = mid
+        else:
+            hi = mid
+    return 0.5 * (lo + hi)
+
+
+def _make_nonlinear_result(
+    model: MultiServiceModel,
+    flows: Mapping[str, float],
+    *,
+    beta: float,
+    power: int,
+    iterations: int,
+    converged: bool,
+    gap: float,
+) -> MCEquilibriumResult:
+    loads = model.resource_loads(flows)
+    path_costs = _nonlinear_path_costs(model, flows, beta=beta, power=power)
+    total_cost = sum(flows[name] * path_costs[name] for name in model.path_names)
+    request_average_costs = {
+        request.name: sum(
+            flows[path.name] * path_costs[path.name]
+            for path in model.paths_for_request(request.name)
+        ) / request.demand
+        for request in model.requests
+    }
+    return MCEquilibriumResult(
+        model_name=model.name,
+        flows={name: _clean_float(value) for name, value in flows.items()},
+        loads={name: _clean_float(value) for name, value in loads.items()},
+        path_costs={name: _clean_float(value) for name, value in path_costs.items()},
+        request_average_costs={name: _clean_float(value) for name, value in request_average_costs.items()},
+        total_cost=_clean_float(total_cost),
+        average_cost=_clean_float(total_cost / model.total_demand),
+        potential=_clean_float(_nonlinear_potential(model, loads, beta=beta, power=power)),
+        iterations=iterations,
+        converged=converged,
+        gap=_clean_float(gap),
+    )
 
 
 def _make_result(

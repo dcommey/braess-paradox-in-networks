@@ -1,0 +1,11 @@
+{
+  "dataset": "Abilene traffic matrices, X01",
+  "source": "https://www.cs.utexas.edu/~yzhang/research/AbileneTM/",
+  "documentation": "https://cesnet.github.io/cesnet-tszoo/abilene/",
+  "citation_doi": "10.1145/885651.781053",
+  "files": {
+    "abilene_X01.gz": "d996a9115d2815eec158d5055452deb389f5546a96e0dfcbfae5c22a40372558",
+    "abilene_demands.txt": "e34f3d9c627b4d4518edf7df7ad1cd281df5304dfe86139de012cdb337ed7a49",
+    "abilene_readme.txt": "caa200883f4f29938c063ea01a188f01494ed1d1a43c854a375a3e11bfe473c9"
+  }
+}

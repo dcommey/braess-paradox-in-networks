@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from math import log
 from statistics import mean
 
 from .metrics import paradox_penalty, security_braess_ratio
@@ -43,10 +44,18 @@ def build_topology_sfc_model(
     include_gateway: bool,
     request_count: int | None = None,
     gateway_delay: float = 0.04,
+    gateway_slope: float = 0.0,
     gateway_capacity_factor: float = 1.0,
     shared_slope_factor: float = 1.0,
     gateway_risk: float = 0.42,
     gateway_exposure: float = 2.4,
+    demands: tuple[float, ...] | None = None,
+    gateway_site_index: int = 0,
+    vnf_site_offset: int = 0,
+    distributed_delay: float = 1.04,
+    link_delay_factor: float = 0.025,
+    link_slope_factor: float = 0.02,
+    link_capacity_factor: float = 1.0,
 ) -> MultiServiceModel:
     """Build a multi-tenant security-service-chain model on a topology.
 
@@ -62,6 +71,8 @@ def build_topology_sfc_model(
     peripheral = topology.peripheral_nodes()
     if request_count is None:
         request_count = min(8, max(4, len(nodes) // 5))
+    if demands is not None:
+        request_count = len(demands)
 
     requests: list[Request] = []
     for idx in range(request_count):
@@ -72,7 +83,7 @@ def build_topology_sfc_model(
         requests.append(
             Request(
                 name=f"tenant_{idx+1}",
-                demand=1.0,
+                demand=demands[idx] if demands is not None else 1.0,
                 source=source,
                 destination=destination,
             )
@@ -103,7 +114,7 @@ def build_topology_sfc_model(
     resources["central_zero_trust_gateway"] = Resource(
         "central_zero_trust_gateway",
         base_delay=gateway_delay,
-        slope=0.0,
+        slope=gateway_slope,
         capacity=total_demand * gateway_capacity_factor,
         risk=gateway_risk,
         exposure=gateway_exposure,
@@ -111,22 +122,23 @@ def build_topology_sfc_model(
     )
 
     for idx, request in enumerate(requests):
-        left_site = central[(2 * idx + 1) % len(central)]
-        right_site = central[(2 * idx + 2) % len(central)]
-        gateway_site = central[0]
+        left_site = central[(2 * idx + 1 + vnf_site_offset) % len(central)]
+        right_site = central[(2 * idx + 2 + vnf_site_offset) % len(central)]
+        gateway_site = central[gateway_site_index % len(central)]
 
-        left_links = _route_resources(topology, request.source, left_site, resources)
-        left_links += _route_resources(topology, left_site, request.destination, resources)
-        right_links = _route_resources(topology, request.source, right_site, resources)
-        right_links += _route_resources(topology, right_site, request.destination, resources)
-        gateway_links = _route_resources(topology, request.source, gateway_site, resources)
-        gateway_links += _route_resources(topology, gateway_site, request.destination, resources)
+        route_args = (link_delay_factor, link_slope_factor, link_capacity_factor)
+        left_links = _route_resources(topology, request.source, left_site, resources, *route_args)
+        left_links += _route_resources(topology, left_site, request.destination, resources, *route_args)
+        right_links = _route_resources(topology, request.source, right_site, resources, *route_args)
+        right_links += _route_resources(topology, right_site, request.destination, resources, *route_args)
+        gateway_links = _route_resources(topology, request.source, gateway_site, resources, *route_args)
+        gateway_links += _route_resources(topology, gateway_site, request.destination, resources, *route_args)
 
         left_constant = f"distributed_ids_left:{request.name}"
         right_constant = f"distributed_ids_right:{request.name}"
         resources[left_constant] = Resource(
             left_constant,
-            base_delay=1.04 + 0.01 * (idx % 3),
+            base_delay=distributed_delay + 0.01 * (idx % 3),
             slope=0.0,
             capacity=2.0,
             risk=0.045,
@@ -135,7 +147,7 @@ def build_topology_sfc_model(
         )
         resources[right_constant] = Resource(
             right_constant,
-            base_delay=1.04 + 0.012 * (idx % 4),
+            base_delay=distributed_delay + 0.012 * (idx % 4),
             slope=0.0,
             capacity=2.0,
             risk=0.045,
@@ -245,6 +257,36 @@ def risk_concentration_index(model: MultiServiceModel, result: MCEquilibriumResu
     return sum((weight / total) ** 2 for weight in weights)
 
 
+def load_hhi(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
+    loads = [max(0.0, result.loads.get(name, 0.0)) for name in model.resources]
+    total = sum(loads)
+    return sum((value / total) ** 2 for value in loads) if total > 0 else 0.0
+
+
+def normalized_load_entropy(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
+    loads = [max(0.0, result.loads.get(name, 0.0)) for name in model.resources]
+    positive = [value for value in loads if value > 0.0]
+    total = sum(positive)
+    if total <= 0.0 or len(positive) <= 1:
+        return 0.0
+    return -sum((value / total) * log(value / total) for value in positive) / log(len(positive))
+
+
+def maximum_affected_demand_share(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
+    return max((load / model.total_demand for load in result.loads.values()), default=0.0)
+
+
+def single_resource_removal_loss(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
+    """Worst fraction of demand whose selected paths traverse one resource."""
+
+    affected = {name: 0.0 for name in model.resources}
+    for path in model.paths:
+        flow = result.flows.get(path.name, 0.0)
+        for name in set(path.resources):
+            affected[name] += flow
+    return max(affected.values(), default=0.0) / model.total_demand
+
+
 def expected_attack_loss(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
     losses = []
     for name, resource in model.resources.items():
@@ -323,6 +365,10 @@ def summarize_evaluations(evaluations: list[PolicyEvaluation]) -> list[dict[str,
                 "paradox_penalty": evaluation.penalty,
                 "security_braess_ratio": evaluation.sbr,
                 "risk_concentration": risk_concentration_index(evaluation.model, evaluation.result),
+                "load_hhi": load_hhi(evaluation.model, evaluation.result),
+                "load_entropy": normalized_load_entropy(evaluation.model, evaluation.result),
+                "max_affected_share": maximum_affected_demand_share(evaluation.model, evaluation.result),
+                "single_resource_removal_loss": single_resource_removal_loss(evaluation.model, evaluation.result),
                 "expected_attack_loss": expected_attack_loss(evaluation.model, evaluation.result),
                 "weighted_attack_loss": weighted_attack_loss(evaluation.model, evaluation.result),
                 "ddos_target": target,
@@ -443,6 +489,7 @@ def experiment_parameters() -> list[dict[str, object]]:
     return [
         {"parameter": "Tenant demand $d_r$", "value": "1.0 for every request"},
         {"parameter": "Gateway free-flow delay $b_g$", "value": "0.04"},
+        {"parameter": "Gateway load slope $a_g$", "value": "0.0"},
         {"parameter": "Gateway capacity factor", "value": "1.0 times total demand"},
         {"parameter": "Shared security-plane slope", "value": "1.0"},
         {"parameter": "Distributed IDS delay", "value": "1.04--1.076"},
@@ -522,6 +569,9 @@ def _route_resources(
     source: str,
     target: str,
     resources: dict[str, Resource],
+    delay_factor: float = 0.025,
+    slope_factor: float = 0.02,
+    capacity_factor: float = 1.0,
 ) -> list[str]:
     path = topology.shortest_path(source, target)
     names: list[str] = []
@@ -531,9 +581,9 @@ def _route_resources(
         if name not in resources:
             resources[name] = Resource(
                 name,
-                base_delay=0.025 * edge.latency,
-                slope=0.02 * edge.latency,
-                capacity=edge.capacity,
+                base_delay=delay_factor * edge.latency,
+                slope=slope_factor * edge.latency,
+                capacity=edge.capacity * capacity_factor,
                 risk=edge.risk,
                 exposure=edge.exposure,
                 kind="link",

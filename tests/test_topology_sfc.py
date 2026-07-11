@@ -1,8 +1,11 @@
 import unittest
 
 from security_braess.topology import nsfnet
-from security_braess.topology_sfc import build_topology_sfc_model, evaluate_topology_suite, summarize_evaluations
-from security_braess.multicommodity import solve_multicommodity_equilibrium
+from security_braess.topology_sfc import (
+    build_topology_sfc_model, evaluate_topology_suite, summarize_evaluations,
+    load_hhi, normalized_load_entropy, single_resource_removal_loss,
+)
+from security_braess.multicommodity import solve_multicommodity_equilibrium, solve_nonlinear_equilibrium
 
 
 class TopologySfcTest(unittest.TestCase):
@@ -34,7 +37,25 @@ class TopologySfcTest(unittest.TestCase):
                 topology,
             )
 
+    def test_nonlinear_solver_recomputes_feasible_equilibrium(self):
+        model = build_topology_sfc_model(
+            nsfnet(), include_gateway=True, request_count=6, gateway_slope=0.25
+        )
+        result = solve_nonlinear_equilibrium(model)
+        self.assertTrue(result.converged)
+        for request in model.requests:
+            allocated = sum(result.flows[path.name] for path in model.paths_for_request(request.name))
+            self.assertAlmostEqual(allocated, request.demand, places=6)
+
+    def test_standard_resilience_metrics_are_bounded(self):
+        model = build_topology_sfc_model(nsfnet(), include_gateway=True, request_count=5)
+        result = solve_multicommodity_equilibrium(model)
+        self.assertGreaterEqual(load_hhi(model, result), 0.0)
+        self.assertLessEqual(load_hhi(model, result), 1.0)
+        self.assertGreaterEqual(normalized_load_entropy(model, result), 0.0)
+        self.assertLessEqual(normalized_load_entropy(model, result), 1.0)
+        self.assertGreaterEqual(single_resource_removal_loss(model, result), 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
-

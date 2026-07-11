@@ -8,3 +8,16 @@ paper/*.bbl
 paper/*.blg
 paper/*.log
 paper/*.out
+paper/*.fdb_latexmk
+paper/*.fls
+tmp/
+output/.DS_Store
+paper/
+output/
+arxiv_submission.zip
+journal_submission.zip
+scripts/verify_citations.py
+experiments/results/citation_audit.*
+experiments/results/monte_carlo_*
+experiments/results/nonlinear_equilibrium.*
+experiments/results/trace_calibrated_case.*
