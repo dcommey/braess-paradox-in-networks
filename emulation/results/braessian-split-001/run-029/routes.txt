@@ -1,0 +1,246 @@
+source
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 8e95:6065:8e22::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr be27:7110:44ac::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr f2ec:c771:a939::
+11: source-eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 5e:0c:69:af:cf:df brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.79.1.2/24 brd 10.79.1.255 scope global source-eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5c0c:69ff:feaf:cfdf/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+default via 10.79.1.1 dev source-eth0 
+10.79.1.0/24 dev source-eth0 proto kernel scope link src 10.79.1.2 
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc noqueue 0: dev source-eth0 root refcnt 2 
+
+A
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr ae0a:e925:237c::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 72df:5376:811c::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr c616:ab70:65da::
+11: A-eth0@if12: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 8e:2b:bd:24:9e:31 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.79.2.2/24 brd 10.79.2.255 scope global A-eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::8c2b:bdff:fe24:9e31/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+default via 10.79.2.1 dev A-eth0 
+10.79.2.0/24 dev A-eth0 proto kernel scope link src 10.79.2.2 
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc noqueue 0: dev A-eth0 root refcnt 2 
+
+B
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 3add:1fbb:592c::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr aeb5:1ff4:6b8f::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr 4e8f:debd:1de0::
+11: B-eth0@if13: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 6a:2a:64:4f:5e:2e brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.79.3.2/24 brd 10.79.3.255 scope global B-eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::682a:64ff:fe4f:5e2e/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+default via 10.79.3.1 dev B-eth0 
+10.79.3.0/24 dev B-eth0 proto kernel scope link src 10.79.3.2 
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc noqueue 0: dev B-eth0 root refcnt 2 
+
+C
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 2a95:3bda:548e::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr fea8:d43d:e8ad::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr 76fb:ecb4:ba6c::
+11: C-eth0@if14: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc netem state UP group default qlen 1000
+    link/ether 1a:28:d9:f7:77:42 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.79.4.2/24 brd 10.79.4.255 scope global C-eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::1828:d9ff:fef7:7742/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+default via 10.79.4.1 dev C-eth0 
+10.79.4.0/24 dev C-eth0 proto kernel scope link src 10.79.4.2 
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc netem 10: dev C-eth0 root refcnt 11 limit 1000 delay 5ms
+
+D
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 3e8f:df4b:bb94::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 60b:cf31:3b1d::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr aac3:d684:cb72::
+11: D-eth0@if15: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc netem state UP group default qlen 1000
+    link/ether 96:ff:60:06:c3:06 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.79.5.2/24 brd 10.79.5.255 scope global D-eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::94ff:60ff:fe06:c306/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+default via 10.79.5.1 dev D-eth0 
+10.79.5.0/24 dev D-eth0 proto kernel scope link src 10.79.5.2 
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc netem 10: dev D-eth0 root refcnt 11 limit 1000 delay 5ms
+
+router
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr deb5:ba48:c605::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr fe51:d28f:1ec9::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr eaf1:83c0:fa0d::
+11: router-eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 9e:df:d1:a3:87:c1 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.79.1.1/24 brd 10.79.1.255 scope global router-eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::9cdf:d1ff:fea3:87c1/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+12: router-eth1@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 82:78:b2:42:23:1b brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet 10.79.2.1/24 brd 10.79.2.255 scope global router-eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::8078:b2ff:fe42:231b/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+13: router-eth2@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether f2:29:72:4e:1c:34 brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet 10.79.3.1/24 brd 10.79.3.255 scope global router-eth2
+       valid_lft forever preferred_lft forever
+    inet6 fe80::f029:72ff:fe4e:1c34/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+14: router-eth3@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc netem state UP group default qlen 1000
+    link/ether 82:9e:f2:2b:01:50 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+    inet 10.79.4.1/24 brd 10.79.4.255 scope global router-eth3
+       valid_lft forever preferred_lft forever
+    inet6 fe80::809e:f2ff:fe2b:150/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+15: router-eth4@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc netem state UP group default qlen 1000
+    link/ether e6:2b:b0:46:b7:cb brd ff:ff:ff:ff:ff:ff link-netnsid 4
+    inet 10.79.5.1/24 brd 10.79.5.255 scope global router-eth4
+       valid_lft forever preferred_lft forever
+    inet6 fe80::e42b:b0ff:fe46:b7cb/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+10.79.1.0/24 dev router-eth0 proto kernel scope link src 10.79.1.1 
+10.79.2.0/24 dev router-eth1 proto kernel scope link src 10.79.2.1 
+10.79.3.0/24 dev router-eth2 proto kernel scope link src 10.79.3.1 
+10.79.4.0/24 dev router-eth3 proto kernel scope link src 10.79.4.1 
+10.79.5.0/24 dev router-eth4 proto kernel scope link src 10.79.5.1 
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc noqueue 0: dev router-eth0 root refcnt 2 
+qdisc noqueue 0: dev router-eth1 root refcnt 2 
+qdisc noqueue 0: dev router-eth2 root refcnt 2 
+qdisc netem 10: dev router-eth3 root refcnt 11 limit 1000 delay 5ms
+qdisc netem 10: dev router-eth4 root refcnt 11 limit 1000 delay 5ms

@@ -1,0 +1,50 @@
+[
+  {
+    "rate": 1,
+    "sent_mbps": 0.9998924285016623,
+    "received_mbps": 0.9984668171059752,
+    "loss_pct": 0,
+    "rtt_ms": 12.238252726410622,
+    "throttled_usec": 0
+  },
+  {
+    "rate": 5,
+    "sent_mbps": 4.996304302675487,
+    "received_mbps": 4.988907008820603,
+    "loss_pct": 0,
+    "rtt_ms": 11.558932401789544,
+    "throttled_usec": 0
+  },
+  {
+    "rate": 8,
+    "sent_mbps": 7.9988481769382895,
+    "received_mbps": 7.987541115108206,
+    "loss_pct": 0,
+    "rtt_ms": 11.413560284236976,
+    "throttled_usec": 0
+  },
+  {
+    "rate": 9,
+    "sent_mbps": 8.998866530037082,
+    "received_mbps": 8.985769172071658,
+    "loss_pct": 0,
+    "rtt_ms": 11.39319079353326,
+    "throttled_usec": 0
+  },
+  {
+    "rate": 10,
+    "sent_mbps": 9.998920122493036,
+    "received_mbps": 9.558688911544387,
+    "loss_pct": 3.35,
+    "rtt_ms": 74.922941419422,
+    "throttled_usec": 0
+  },
+  {
+    "rate": 12,
+    "sent_mbps": 11.99861766912387,
+    "received_mbps": 9.577204987444192,
+    "loss_pct": 19.287182959691084,
+    "rtt_ms": 83.48889150943396,
+    "throttled_usec": 0
+  }
+]

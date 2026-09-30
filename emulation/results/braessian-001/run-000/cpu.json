@@ -1,0 +1,1 @@
+{"before": "usage_usec 974163\nuser_usec 387439\nsystem_usec 586723\nnr_periods 12\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n", "after": "usage_usec 20841857\nuser_usec 12912622\nsystem_usec 7929234\nnr_periods 643\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n"}

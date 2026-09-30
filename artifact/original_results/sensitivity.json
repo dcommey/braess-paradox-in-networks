@@ -1,0 +1,222 @@
+[
+  {
+    "parameter": "gateway_delay",
+    "value": 0.0,
+    "tau": 0.02,
+    "naive_penalty": 0.28573910582062306,
+    "aware_penalty": 0.011911924086065569,
+    "aware_gain": 0.21297258556959522,
+    "naive_attack_loss": 4.032,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_delay",
+    "value": 0.04,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_delay",
+    "value": 0.12,
+    "tau": 0.02,
+    "naive_penalty": 0.25763308117660383,
+    "aware_penalty": 0.01373670728187987,
+    "aware_gain": 0.19393285493614865,
+    "naive_attack_loss": 2.8182986244534485,
+    "aware_attack_loss": 0.11879167987758797,
+    "cap_fraction": 0.15
+  },
+  {
+    "parameter": "gateway_delay",
+    "value": 0.24,
+    "tau": 0.02,
+    "naive_penalty": 0.1842175251541093,
+    "aware_penalty": 0.015140127240372859,
+    "aware_gain": 0.14277562552685022,
+    "naive_attack_loss": 1.4538461345801386,
+    "aware_attack_loss": 0.10883600131340761,
+    "cap_fraction": 0.1
+  },
+  {
+    "parameter": "gateway_capacity_factor",
+    "value": 0.5,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 7.721334412534109,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_capacity_factor",
+    "value": 0.75,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 5.147556275022739,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_capacity_factor",
+    "value": 1.0,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_capacity_factor",
+    "value": 1.5,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "shared_slope_factor",
+    "value": 0.5,
+    "tau": 0.02,
+    "naive_penalty": -0.19194724006870825,
+    "aware_penalty": -0.19194724006870825,
+    "aware_gain": 0.0,
+    "naive_attack_loss": 4.032,
+    "aware_attack_loss": 4.032,
+    "cap_fraction": 1.0
+  },
+  {
+    "parameter": "shared_slope_factor",
+    "value": 1.0,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "shared_slope_factor",
+    "value": 1.5,
+    "tau": 0.02,
+    "naive_penalty": 0.13628556412623422,
+    "aware_penalty": 0.0,
+    "aware_gain": 0.11993953670531164,
+    "naive_attack_loss": 0.46891649327501855,
+    "aware_attack_loss": 0.08946913985513473,
+    "cap_fraction": 0.0
+  },
+  {
+    "parameter": "shared_slope_factor",
+    "value": 2.0,
+    "tau": 0.02,
+    "naive_penalty": 0.012897926315276096,
+    "aware_penalty": 0.012897926315276096,
+    "aware_gain": 0.0,
+    "naive_attack_loss": 0.09395344142629798,
+    "aware_attack_loss": 0.09395344142629798,
+    "cap_fraction": 1.0
+  },
+  {
+    "parameter": "tau",
+    "value": 0.0,
+    "tau": 0.0,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.0,
+    "aware_gain": 0.23186360896954092,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.0902057569877325,
+    "cap_fraction": 0.0
+  },
+  {
+    "parameter": "tau",
+    "value": 0.01,
+    "tau": 0.01,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.0061742465964798095,
+    "aware_gain": 0.22712094547158881,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.11879167987758797,
+    "cap_fraction": 0.15
+  },
+  {
+    "parameter": "tau",
+    "value": 0.02,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "tau",
+    "value": 0.05,
+    "tau": 0.05,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.036604752136479714,
+    "aware_gain": 0.2037461667688609,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.49391999999999997,
+    "cap_fraction": 0.35
+  },
+  {
+    "parameter": "gateway_risk_exposure_scale",
+    "value": 0.5,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 0.9792383817659003,
+    "aware_attack_loss": 0.14000994721998306,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_risk_exposure_scale",
+    "value": 1.0,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 3.916953527063601,
+    "aware_attack_loss": 0.252,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_risk_exposure_scale",
+    "value": 1.5,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 8.813145435893102,
+    "aware_attack_loss": 0.567,
+    "cap_fraction": 0.25
+  },
+  {
+    "parameter": "gateway_risk_exposure_scale",
+    "value": 2.0,
+    "tau": 0.02,
+    "naive_penalty": 0.30185213417436796,
+    "aware_penalty": 0.018213974657232283,
+    "aware_gain": 0.21787279221001427,
+    "naive_attack_loss": 15.667814108254404,
+    "aware_attack_loss": 1.008,
+    "cap_fraction": 0.25
+  }
+]

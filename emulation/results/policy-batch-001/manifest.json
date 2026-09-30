@@ -1,0 +1,86 @@
+{
+  "purpose": "implementation validation pilot; excluded from final evaluation",
+  "order_seed": 4100,
+  "runs": [
+    {
+      "rate": 884,
+      "seed": 4101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 4101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 4101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 4101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 4101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 4101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 4101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 4101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1,
+      "phasing": "staggered"
+    }
+  ]
+}

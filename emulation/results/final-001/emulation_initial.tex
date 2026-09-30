@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\color{blue}\scriptsize
+\caption{Mean request latency (ms) after activation, and paired unrestricted latency change after the demand step (mean $\pm$ 95\% interval, percentage points). Each entry uses four held-out seeds. Stag. and Sync. denote update phases.}
+\label{tab:emulation}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rlrrr}
+\toprule
+Rate & Mode & Baseline & Unrestricted & Step change (\%) \\
+\midrule
+632 & Stag. & 13.87 & 280.87 & $1320.4\pm4405.3$ \\
+632 & Sync. & 68.87 & 290.98 & $39.2\pm225.4$ \\
+884 & Stag. & 118.46 & 555.65 & $1928.5\pm2639.9$ \\
+884 & Sync. & 348.03 & 219.92 & $78.8\pm159.5$ \\
+1137 & Stag. & 515.93 & 86.20 & $-24.8\pm113.4$ \\
+1137 & Sync. & 839.57 & 948.38 & $28.0\pm211.2$ \\
+\bottomrule
+\end{tabular}
+\end{table}

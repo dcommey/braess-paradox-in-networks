@@ -1,0 +1,182 @@
+[
+  {
+    "file": "run-00.json",
+    "rate": 9,
+    "sent_mbps": 8.99847588314729,
+    "received_mbps": 8.985996447785682,
+    "loss_pct": 0,
+    "rtt_ms": 11.438356164383562,
+    "samples": 146,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-01.json",
+    "rate": 10,
+    "sent_mbps": 9.998588949134552,
+    "received_mbps": 9.56457615667668,
+    "loss_pct": 3.29,
+    "rtt_ms": 74.92135922330097,
+    "samples": 103,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-02.json",
+    "rate": 5,
+    "sent_mbps": 4.98992467123335,
+    "received_mbps": 4.982236246442507,
+    "loss_pct": 0,
+    "rtt_ms": 11.565986394557823,
+    "samples": 147,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-03.json",
+    "rate": 12,
+    "sent_mbps": 11.998800119988,
+    "received_mbps": 9.578143205204945,
+    "loss_pct": 19.275,
+    "rtt_ms": 82.66792452830188,
+    "samples": 53,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-04.json",
+    "rate": 12,
+    "sent_mbps": 11.99891709773193,
+    "received_mbps": 9.57835933632898,
+    "loss_pct": 19.284940411700976,
+    "rtt_ms": 83.4,
+    "samples": 66,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-05.json",
+    "rate": 1,
+    "sent_mbps": 0.999914757266943,
+    "received_mbps": 0.9985067331805284,
+    "loss_pct": 0,
+    "rtt_ms": 12.433783783783785,
+    "samples": 148,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-06.json",
+    "rate": 1,
+    "sent_mbps": 0.9998856380801444,
+    "received_mbps": 0.9983724033893744,
+    "loss_pct": 0,
+    "rtt_ms": 12.277027027027026,
+    "samples": 148,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-07.json",
+    "rate": 10,
+    "sent_mbps": 9.999161320344257,
+    "received_mbps": 9.538015068144931,
+    "loss_pct": 3.57,
+    "rtt_ms": 74.87727272727273,
+    "samples": 88,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-08.json",
+    "rate": 1,
+    "sent_mbps": 0.9998768901578994,
+    "received_mbps": 0.9985213147480226,
+    "loss_pct": 0,
+    "rtt_ms": 12.003947368421052,
+    "samples": 152,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-09.json",
+    "rate": 9,
+    "sent_mbps": 8.99928793134243,
+    "received_mbps": 8.985956073900999,
+    "loss_pct": 0,
+    "rtt_ms": 11.38310810810811,
+    "samples": 148,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-10.json",
+    "rate": 9,
+    "sent_mbps": 8.99883577562153,
+    "received_mbps": 8.985354994528294,
+    "loss_pct": 0,
+    "rtt_ms": 11.358108108108109,
+    "samples": 148,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-11.json",
+    "rate": 12,
+    "sent_mbps": 11.998135789651682,
+    "received_mbps": 9.57511242079865,
+    "loss_pct": 19.30160846737228,
+    "rtt_ms": 84.39874999999999,
+    "samples": 80,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-12.json",
+    "rate": 5,
+    "sent_mbps": 4.9993407119436135,
+    "received_mbps": 4.991906248007138,
+    "loss_pct": 0,
+    "rtt_ms": 11.612162162162162,
+    "samples": 148,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-13.json",
+    "rate": 5,
+    "sent_mbps": 4.999647524849498,
+    "received_mbps": 4.992578532012165,
+    "loss_pct": 0,
+    "rtt_ms": 11.498648648648649,
+    "samples": 148,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-14.json",
+    "rate": 8,
+    "sent_mbps": 7.999063109733273,
+    "received_mbps": 7.987641122273563,
+    "loss_pct": 0,
+    "rtt_ms": 11.331292517006803,
+    "samples": 147,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-15.json",
+    "rate": 10,
+    "sent_mbps": 9.9990100980003,
+    "received_mbps": 9.57347550981155,
+    "loss_pct": 3.19,
+    "rtt_ms": 74.9701923076923,
+    "samples": 104,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-16.json",
+    "rate": 8,
+    "sent_mbps": 7.998427309230322,
+    "received_mbps": 7.9870739192459395,
+    "loss_pct": 0,
+    "rtt_ms": 11.431756756756757,
+    "samples": 148,
+    "throttled_usec": 0
+  },
+  {
+    "file": "run-17.json",
+    "rate": 8,
+    "sent_mbps": 7.999054111851273,
+    "received_mbps": 7.987908303805114,
+    "loss_pct": 0,
+    "rtt_ms": 11.477631578947369,
+    "samples": 152,
+    "throttled_usec": 0
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "topology": "fat_tree_k4",
+    "gateway_slope": 0.25,
+    "baseline_cost": 1.5856294999211829,
+    "naive_cost": 1.9406839486419707,
+    "aware_cost": 1.6057967128526862,
+    "naive_penalty": 0.22392018358540666,
+    "aware_penalty": 0.012718742261357914,
+    "cap_fraction": 0.15,
+    "baseline_iterations": 853,
+    "naive_iterations": 1764,
+    "aware_iterations": 740,
+    "all_converged": true
+  },
+  {
+    "topology": "nsfnet",
+    "gateway_slope": 0.25,
+    "baseline_cost": 1.5914794754923625,
+    "naive_cost": 1.926763629333483,
+    "aware_cost": 1.6130613175088495,
+    "naive_penalty": 0.21067450696302095,
+    "aware_penalty": 0.013560867324292819,
+    "cap_fraction": 0.15,
+    "baseline_iterations": 63,
+    "naive_iterations": 842,
+    "aware_iterations": 51,
+    "all_converged": true
+  },
+  {
+    "topology": "geant",
+    "gateway_slope": 0.25,
+    "baseline_cost": 1.6000230157511681,
+    "naive_cost": 1.9056838097920696,
+    "aware_cost": 1.621517455225238,
+    "naive_penalty": 0.19103524826322696,
+    "aware_penalty": 0.013433831427717844,
+    "cap_fraction": 0.15,
+    "baseline_iterations": 37,
+    "naive_iterations": 1590,
+    "aware_iterations": 67,
+    "all_converged": true
+  },
+  {
+    "topology": "edge_fog",
+    "gateway_slope": 0.25,
+    "baseline_cost": 1.5821336699287172,
+    "naive_cost": 1.9227060095006454,
+    "aware_cost": 1.6036077533380222,
+    "naive_penalty": 0.21526141946481214,
+    "aware_penalty": 0.013572862911306681,
+    "cap_fraction": 0.15,
+    "baseline_iterations": 1562,
+    "naive_iterations": 19,
+    "aware_iterations": 1173,
+    "all_converged": true
+  }
+]

@@ -1,0 +1,251 @@
+{
+  "purpose": "Separate conservative-load replication after resource-limited original batch; original data retained",
+  "order_seed": 6099,
+  "calibration": "processing-002/audit.json",
+  "rate_rule": "floor(0.5 * 1000 / maximum independent per-run mean service ms)",
+  "reference_service_ms": 2.3328458277571253,
+  "rate": 214,
+  "selection": "No fitted cap selection at this new load; compare three prespecified caps",
+  "runs": [
+    {
+      "rate": 214,
+      "seed": 6101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 214,
+      "seed": 6104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 214,
+      "seed": 6102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    }
+  ]
+}

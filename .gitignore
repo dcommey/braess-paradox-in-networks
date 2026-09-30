@@ -21,3 +21,9 @@ experiments/results/citation_audit.*
 experiments/results/monte_carlo_*
 experiments/results/nonlinear_equilibrium.*
 experiments/results/trace_calibrated_case.*
+
+.venv/
+generated/
+**/*.jsonl
+**/*.jsonl.gz
+**/__pycache__/

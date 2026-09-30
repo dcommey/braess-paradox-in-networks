@@ -1,0 +1,10 @@
+{
+  "runs": 72,
+  "paired_schedules_verified": true,
+  "offered_including_probes": 2047728,
+  "completed_including_probes": 1844151,
+  "queue_dropped": 203559,
+  "unaccounted": 18,
+  "throttled_runs": 51,
+  "max_cohort_send_lateness_p95_ms": 8.332198
+}

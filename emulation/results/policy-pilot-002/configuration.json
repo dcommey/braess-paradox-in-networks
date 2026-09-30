@@ -1,0 +1,11 @@
+{
+  "rate": 884.0,
+  "seed": 4101,
+  "cap": 0.25,
+  "seconds": 30,
+  "activate": 10,
+  "step_at": 20,
+  "step_factor": 1,
+  "phasing": "staggered",
+  "output": "/experiment/pilot"
+}

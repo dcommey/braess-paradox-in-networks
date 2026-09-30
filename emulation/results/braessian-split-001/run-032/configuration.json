@@ -1,0 +1,16 @@
+{
+  "rate": 273.0,
+  "seed": 7202,
+  "cap": 0.0,
+  "seconds": 90.0,
+  "activate": 20.0,
+  "step_at": 60.0,
+  "step_factor": 1.15,
+  "phasing": "synchronized",
+  "shared_service_ms": 2.0,
+  "replica_service_ms": 0.2,
+  "replica_delay_ms": 5.0,
+  "fixed_route": null,
+  "split_step": 0.2,
+  "output": "/experiment/split-batch/run-032"
+}

@@ -1,0 +1,738 @@
+{
+  "purpose": "held-out repeated transient evaluation",
+  "order_seed": 5099,
+  "screening_seed": 4101,
+  "screening_grid": [
+    0,
+    0.25,
+    1
+  ],
+  "screened_caps": {
+    "632": 1,
+    "884": 1,
+    "1137": 1
+  },
+  "screening_rule": "Largest pilot-tested cap with completed-request mean latency in seconds 20-30 at most 1.02 times paired baseline and no completion loss. Applied before held-out evaluation; one calibration replicate, uncertainty assessed on held-out runs.",
+  "runs": [
+    {
+      "rate": 884,
+      "seed": 5103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5103,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5104,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5103,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5101,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 1137,
+      "seed": 5101,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 884,
+      "seed": 5104,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5102,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    },
+    {
+      "rate": 632,
+      "seed": 5103,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 884,
+      "seed": 5101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5104,
+      "cap": 0,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5102,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 632,
+      "seed": 5102,
+      "cap": 1,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "synchronized"
+    },
+    {
+      "rate": 1137,
+      "seed": 5101,
+      "cap": 0.25,
+      "seconds": 30,
+      "activate": 10,
+      "step_at": 20,
+      "step_factor": 1.15,
+      "phasing": "staggered"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "rate": 214,
+    "phasing": "staggered",
+    "cap": 0.25,
+    "window": "expanded",
+    "mean_paired_penalty_pct": -36.25281541294144,
+    "ci_low_pct": -37.76128396788824,
+    "ci_high_pct": -34.744346857994636,
+    "mean_paired_difference_ms": -5.232068611653307
+  },
+  {
+    "rate": 214,
+    "phasing": "staggered",
+    "cap": 0.25,
+    "window": "step",
+    "mean_paired_penalty_pct": -18.20771087950939,
+    "ci_low_pct": -23.926271146118797,
+    "ci_high_pct": -12.48915061289998,
+    "mean_paired_difference_ms": -2.608436138225772
+  },
+  {
+    "rate": 214,
+    "phasing": "staggered",
+    "cap": 1,
+    "window": "expanded",
+    "mean_paired_penalty_pct": -76.00255472708484,
+    "ci_low_pct": -84.6580451869432,
+    "ci_high_pct": -67.34706426722649,
+    "mean_paired_difference_ms": -10.968946471814156
+  },
+  {
+    "rate": 214,
+    "phasing": "staggered",
+    "cap": 1,
+    "window": "step",
+    "mean_paired_penalty_pct": -76.93357087137018,
+    "ci_low_pct": -88.59094225209252,
+    "ci_high_pct": -65.27619949064784,
+    "mean_paired_difference_ms": -11.020676485372462
+  },
+  {
+    "rate": 214,
+    "phasing": "synchronized",
+    "cap": 0.25,
+    "window": "expanded",
+    "mean_paired_penalty_pct": -35.98797129377345,
+    "ci_low_pct": -46.1233538810004,
+    "ci_high_pct": -25.852588706546495,
+    "mean_paired_difference_ms": -5.204058820737328
+  },
+  {
+    "rate": 214,
+    "phasing": "synchronized",
+    "cap": 0.25,
+    "window": "step",
+    "mean_paired_penalty_pct": -19.920978625246754,
+    "ci_low_pct": -20.27320740432181,
+    "ci_high_pct": -19.5687498461717,
+    "mean_paired_difference_ms": -2.859114231972536
+  },
+  {
+    "rate": 214,
+    "phasing": "synchronized",
+    "cap": 1,
+    "window": "expanded",
+    "mean_paired_penalty_pct": -81.36247225743611,
+    "ci_low_pct": -81.49357112352014,
+    "ci_high_pct": -81.23137339135208,
+    "mean_paired_difference_ms": -11.765096733167708
+  },
+  {
+    "rate": 214,
+    "phasing": "synchronized",
+    "cap": 1,
+    "window": "step",
+    "mean_paired_penalty_pct": -81.61730090931074,
+    "ci_low_pct": -82.31834653065944,
+    "ci_high_pct": -80.91625528796204,
+    "mean_paired_difference_ms": -11.714178259518283
+  }
+]

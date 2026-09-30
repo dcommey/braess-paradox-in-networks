@@ -1,0 +1,52 @@
+{
+  "instances_attempted": 1000,
+  "instances": 998,
+  "excluded_nonconverged": 2,
+  "excluded_instance_ids": [
+    321,
+    856
+  ],
+  "paradox_instances": 715,
+  "paradox_prevalence": 0.7164328657314629,
+  "paradox_prevalence_ci95": [
+    0.6876803545697252,
+    0.7435255974264356
+  ],
+  "mitigation_success": 1.0,
+  "mitigation_success_ci95": [
+    0.9946560416437357,
+    1.0
+  ],
+  "positive_cap_instances": 513,
+  "positive_cap_rate": 0.7174825174825175,
+  "zero_cap_instances": 202,
+  "zero_cap_rate": 0.28251748251748254,
+  "mean_selected_cap": 0.32811188811188813,
+  "median_selected_cap": 0.15,
+  "mean_selected_gateway_share": 0.15355961284994746,
+  "median_selected_gateway_share": 0.06345143098505698,
+  "mean_penalty_reduction": 0.07785969784217825,
+  "mean_screen_equilibrium_solves": 3.9839679358717435,
+  "mean_naive_penalty": 0.05101960970053799,
+  "mean_naive_penalty_ci95": [
+    0.04587379569945925,
+    0.05616542370161673
+  ],
+  "mean_screen_runtime_ms": 97.86950362979701,
+  "mean_screen_runtime_ci95": [
+    90.21329818716441,
+    105.5257090724296
+  ],
+  "median_screen_runtime_ms": 58.9892080752179,
+  "cap_distribution": {
+    "0.00": 202,
+    "0.10": 92,
+    "0.15": 93,
+    "0.25": 58,
+    "0.35": 57,
+    "0.50": 54,
+    "0.75": 36,
+    "1.00": 123
+  },
+  "convergence_rate": 0.998
+}

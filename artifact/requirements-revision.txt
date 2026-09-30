@@ -1,0 +1,4 @@
+# Python 3.12; core analytical solver uses the standard library.
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.9.4

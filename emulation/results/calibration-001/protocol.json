@@ -1,0 +1,94 @@
+{
+  "purpose": "exploratory kernel queue calibration",
+  "seed": 20260905,
+  "offered_udp_mbps": [
+    1,
+    5,
+    8,
+    9,
+    10,
+    12
+  ],
+  "schedule": [
+    [
+      1,
+      9
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      2,
+      12
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      8
+    ]
+  ],
+  "duration_seconds": 8,
+  "payload_bytes": 1000,
+  "link_mbps": 10,
+  "one_way_configured_delay_ms": 5,
+  "queue_packets": 100,
+  "kernel": "6.10.14-linuxkit",
+  "probe": "ICMP RTT every 50 ms, including startup",
+  "limitations": "UDP offered application rate excludes headers; RTT includes both directions; kernel queue only."
+}

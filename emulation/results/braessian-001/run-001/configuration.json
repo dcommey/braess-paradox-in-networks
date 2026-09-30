@@ -1,0 +1,15 @@
+{
+  "rate": 273.0,
+  "seed": 7105,
+  "cap": 0.5,
+  "seconds": 60.0,
+  "activate": 20.0,
+  "step_at": 40.0,
+  "step_factor": 1.15,
+  "phasing": "staggered",
+  "shared_service_ms": 2.0,
+  "replica_service_ms": 0.2,
+  "replica_delay_ms": 5.0,
+  "fixed_route": null,
+  "output": "/experiment/braessian-batch/run-001"
+}

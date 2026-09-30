@@ -1,0 +1,141 @@
+{
+  "config": {
+    "output": "/experiment/timed-calibration",
+    "shared_service_ms": 2.0,
+    "replica_service_ms": 0.2,
+    "replica_delay_ms": 5,
+    "seed": 8101,
+    "rates": [
+      150,
+      225,
+      250,
+      265,
+      280,
+      290
+    ],
+    "no_routes": true
+  },
+  "warmup_s": 5,
+  "runs": [
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 150,
+      "seconds": 20,
+      "offered": 2353,
+      "completed": 2353,
+      "end_to_end_ms": 18.747054180620484,
+      "A_service_ms": 3.2428071597960053,
+      "A_served_per_s": 156.86666666666667,
+      "D_service_ms": 1.1046301406714831,
+      "D_served_per_s": 156.86666666666667,
+      "stage_sojourn_ms": {
+        "A": 5.2977906387590314,
+        "D": 1.1756832915427113
+      },
+      "overhead_ms": 12.27358025031874,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 225,
+      "seconds": 20,
+      "offered": 3355,
+      "completed": 3355,
+      "end_to_end_ms": 20.600415757973174,
+      "A_service_ms": 3.1691017394932937,
+      "A_served_per_s": 223.66666666666666,
+      "D_service_ms": 1.0430480220566318,
+      "D_served_per_s": 223.66666666666666,
+      "stage_sojourn_ms": {
+        "A": 7.442964074515649,
+        "D": 1.0939886792846498
+      },
+      "overhead_ms": 12.063463004172876,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 250,
+      "seconds": 20,
+      "offered": 3757,
+      "completed": 3757,
+      "end_to_end_ms": 23.087666084642002,
+      "A_service_ms": 3.15210244956082,
+      "A_served_per_s": 250.46666666666667,
+      "D_service_ms": 1.040709110194304,
+      "D_served_per_s": 250.46666666666667,
+      "stage_sojourn_ms": {
+        "A": 9.982930704285334,
+        "D": 1.1038708080915625
+      },
+      "overhead_ms": 12.000864572265106,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 265,
+      "seconds": 20,
+      "offered": 3940,
+      "completed": 3940,
+      "end_to_end_ms": 25.470538292639596,
+      "A_service_ms": 3.114638087817259,
+      "A_served_per_s": 262.6666666666667,
+      "D_service_ms": 0.9897601373096446,
+      "D_served_per_s": 262.6666666666667,
+      "stage_sojourn_ms": {
+        "A": 12.383774545177666,
+        "D": 1.0459489987309645
+      },
+      "overhead_ms": 12.040814748730966,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 280,
+      "seconds": 20,
+      "offered": 4118,
+      "completed": 4118,
+      "end_to_end_ms": 27.35799333122875,
+      "A_service_ms": 3.1177504550752793,
+      "A_served_per_s": 274.53333333333336,
+      "D_service_ms": 1.0105305973773677,
+      "D_served_per_s": 274.53333333333336,
+      "stage_sojourn_ms": {
+        "A": 14.253195066537154,
+        "D": 1.0609787853326857
+      },
+      "overhead_ms": 12.04381947935891,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 290,
+      "seconds": 20,
+      "offered": 4379,
+      "completed": 4379,
+      "end_to_end_ms": 32.68614673943823,
+      "A_service_ms": 3.084224136332496,
+      "A_served_per_s": 291.93333333333334,
+      "D_service_ms": 0.9849715875770724,
+      "D_served_per_s": 291.93333333333334,
+      "stage_sojourn_ms": {
+        "A": 19.70814949052295,
+        "D": 1.0319273907284767
+      },
+      "overhead_ms": 11.946069858186803,
+      "throttled_usec": 0,
+      "drops": 0
+    }
+  ]
+}

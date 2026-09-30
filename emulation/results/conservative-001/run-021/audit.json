@@ -1,0 +1,550 @@
+{
+  "offered_total": 7376,
+  "completed_total": 7376,
+  "queue_dropped": 0,
+  "unaccounted": 0,
+  "unaccounted_ids": [],
+  "tenant_counters": [
+    [
+      259,
+      0
+    ],
+    [
+      236,
+      0
+    ],
+    [
+      211,
+      0
+    ],
+    [
+      239,
+      0
+    ],
+    [
+      223,
+      0
+    ],
+    [
+      241,
+      0
+    ],
+    [
+      231,
+      0
+    ],
+    [
+      248,
+      0
+    ],
+    [
+      227,
+      0
+    ],
+    [
+      226,
+      0
+    ],
+    [
+      226,
+      0
+    ],
+    [
+      226,
+      0
+    ],
+    [
+      221,
+      0
+    ],
+    [
+      220,
+      0
+    ],
+    [
+      229,
+      0
+    ],
+    [
+      239,
+      0
+    ],
+    [
+      221,
+      0
+    ],
+    [
+      239,
+      0
+    ],
+    [
+      236,
+      0
+    ],
+    [
+      237,
+      0
+    ]
+  ],
+  "stage_counts": {
+    "A": 4024,
+    "B": 3352,
+    "C": 3352,
+    "D": 4024
+  },
+  "preference_switches": 12,
+  "throttled_usec": 0,
+  "probe_offered": 600,
+  "windows": [
+    {
+      "second": 0,
+      "offered": 191,
+      "completed": 191,
+      "gateway": 0,
+      "routes": [
+        88,
+        103,
+        0
+      ],
+      "mean_ms": 14.568646607329843,
+      "p95_ms": 16.003875,
+      "p99_ms": 17.704334,
+      "send_lateness_p95_ms": 2.232829
+    },
+    {
+      "second": 1,
+      "offered": 230,
+      "completed": 230,
+      "gateway": 0,
+      "routes": [
+        115,
+        115,
+        0
+      ],
+      "mean_ms": 14.251078291304347,
+      "p95_ms": 15.827,
+      "p99_ms": 16.771292,
+      "send_lateness_p95_ms": 1.956248
+    },
+    {
+      "second": 2,
+      "offered": 224,
+      "completed": 224,
+      "gateway": 0,
+      "routes": [
+        101,
+        123,
+        0
+      ],
+      "mean_ms": 14.501289044642856,
+      "p95_ms": 15.933334,
+      "p99_ms": 16.860417,
+      "send_lateness_p95_ms": 2.134407
+    },
+    {
+      "second": 3,
+      "offered": 227,
+      "completed": 227,
+      "gateway": 0,
+      "routes": [
+        120,
+        107,
+        0
+      ],
+      "mean_ms": 14.366511030837005,
+      "p95_ms": 15.928792,
+      "p99_ms": 16.774958,
+      "send_lateness_p95_ms": 2.026234
+    },
+    {
+      "second": 4,
+      "offered": 216,
+      "completed": 216,
+      "gateway": 0,
+      "routes": [
+        104,
+        112,
+        0
+      ],
+      "mean_ms": 14.424622879629629,
+      "p95_ms": 15.9435,
+      "p99_ms": 16.772416,
+      "send_lateness_p95_ms": 2.069317
+    },
+    {
+      "second": 5,
+      "offered": 207,
+      "completed": 207,
+      "gateway": 0,
+      "routes": [
+        109,
+        98,
+        0
+      ],
+      "mean_ms": 14.579803739130435,
+      "p95_ms": 16.025958,
+      "p99_ms": 16.967458,
+      "send_lateness_p95_ms": 2.15977
+    },
+    {
+      "second": 6,
+      "offered": 203,
+      "completed": 203,
+      "gateway": 0,
+      "routes": [
+        92,
+        111,
+        0
+      ],
+      "mean_ms": 16.023149201970444,
+      "p95_ms": 30.684,
+      "p99_ms": 42.695667,
+      "send_lateness_p95_ms": 2.327534
+    },
+    {
+      "second": 7,
+      "offered": 205,
+      "completed": 205,
+      "gateway": 0,
+      "routes": [
+        113,
+        92,
+        0
+      ],
+      "mean_ms": 14.613710131707316,
+      "p95_ms": 16.424708,
+      "p99_ms": 17.036208,
+      "send_lateness_p95_ms": 2.18416
+    },
+    {
+      "second": 8,
+      "offered": 218,
+      "completed": 218,
+      "gateway": 0,
+      "routes": [
+        117,
+        101,
+        0
+      ],
+      "mean_ms": 14.415091183486238,
+      "p95_ms": 16.080792,
+      "p99_ms": 16.93275,
+      "send_lateness_p95_ms": 2.045271
+    },
+    {
+      "second": 9,
+      "offered": 220,
+      "completed": 220,
+      "gateway": 0,
+      "routes": [
+        141,
+        79,
+        0
+      ],
+      "mean_ms": 14.479852827272728,
+      "p95_ms": 16.089417,
+      "p99_ms": 16.668542,
+      "send_lateness_p95_ms": 2.009715
+    },
+    {
+      "second": 10,
+      "offered": 213,
+      "completed": 213,
+      "gateway": 0,
+      "routes": [
+        114,
+        99,
+        0
+      ],
+      "mean_ms": 14.518273713615024,
+      "p95_ms": 16.215917,
+      "p99_ms": 16.718291,
+      "send_lateness_p95_ms": 2.144757
+    },
+    {
+      "second": 11,
+      "offered": 236,
+      "completed": 236,
+      "gateway": 0,
+      "routes": [
+        133,
+        103,
+        0
+      ],
+      "mean_ms": 14.465091826271186,
+      "p95_ms": 16.25225,
+      "p99_ms": 19.830042,
+      "send_lateness_p95_ms": 2.115574
+    },
+    {
+      "second": 12,
+      "offered": 203,
+      "completed": 203,
+      "gateway": 0,
+      "routes": [
+        112,
+        91,
+        0
+      ],
+      "mean_ms": 14.507853256157636,
+      "p95_ms": 16.196,
+      "p99_ms": 16.675125,
+      "send_lateness_p95_ms": 2.107482
+    },
+    {
+      "second": 13,
+      "offered": 230,
+      "completed": 230,
+      "gateway": 0,
+      "routes": [
+        117,
+        113,
+        0
+      ],
+      "mean_ms": 14.539443295652173,
+      "p95_ms": 16.366833,
+      "p99_ms": 17.391209,
+      "send_lateness_p95_ms": 2.095083
+    },
+    {
+      "second": 14,
+      "offered": 217,
+      "completed": 217,
+      "gateway": 0,
+      "routes": [
+        132,
+        85,
+        0
+      ],
+      "mean_ms": 14.477262451612903,
+      "p95_ms": 16.14275,
+      "p99_ms": 17.352083,
+      "send_lateness_p95_ms": 2.113301
+    },
+    {
+      "second": 15,
+      "offered": 219,
+      "completed": 219,
+      "gateway": 0,
+      "routes": [
+        111,
+        108,
+        0
+      ],
+      "mean_ms": 14.409388707762558,
+      "p95_ms": 16.028875,
+      "p99_ms": 16.266667,
+      "send_lateness_p95_ms": 2.335472
+    },
+    {
+      "second": 16,
+      "offered": 246,
+      "completed": 246,
+      "gateway": 0,
+      "routes": [
+        138,
+        108,
+        0
+      ],
+      "mean_ms": 14.37973106097561,
+      "p95_ms": 15.959208,
+      "p99_ms": 16.653625,
+      "send_lateness_p95_ms": 2.061701
+    },
+    {
+      "second": 17,
+      "offered": 222,
+      "completed": 222,
+      "gateway": 0,
+      "routes": [
+        128,
+        94,
+        0
+      ],
+      "mean_ms": 14.345666072072072,
+      "p95_ms": 15.875625,
+      "p99_ms": 16.526292,
+      "send_lateness_p95_ms": 2.117166
+    },
+    {
+      "second": 18,
+      "offered": 221,
+      "completed": 221,
+      "gateway": 0,
+      "routes": [
+        113,
+        108,
+        0
+      ],
+      "mean_ms": 14.396493411764705,
+      "p95_ms": 16.195917,
+      "p99_ms": 17.391833,
+      "send_lateness_p95_ms": 2.144937
+    },
+    {
+      "second": 19,
+      "offered": 181,
+      "completed": 181,
+      "gateway": 0,
+      "routes": [
+        115,
+        66,
+        0
+      ],
+      "mean_ms": 14.604356767955801,
+      "p95_ms": 16.251333,
+      "p99_ms": 16.874709,
+      "send_lateness_p95_ms": 2.144463
+    },
+    {
+      "second": 20,
+      "offered": 251,
+      "completed": 251,
+      "gateway": 0,
+      "routes": [
+        142,
+        109,
+        0
+      ],
+      "mean_ms": 14.335877326693227,
+      "p95_ms": 16.056875,
+      "p99_ms": 16.530375,
+      "send_lateness_p95_ms": 2.06225
+    },
+    {
+      "second": 21,
+      "offered": 269,
+      "completed": 269,
+      "gateway": 0,
+      "routes": [
+        161,
+        108,
+        0
+      ],
+      "mean_ms": 14.132999973977695,
+      "p95_ms": 15.369208,
+      "p99_ms": 16.133166,
+      "send_lateness_p95_ms": 2.186324
+    },
+    {
+      "second": 22,
+      "offered": 243,
+      "completed": 243,
+      "gateway": 0,
+      "routes": [
+        138,
+        105,
+        0
+      ],
+      "mean_ms": 14.295381181069958,
+      "p95_ms": 15.770916,
+      "p99_ms": 16.625583,
+      "send_lateness_p95_ms": 2.096495
+    },
+    {
+      "second": 23,
+      "offered": 235,
+      "completed": 235,
+      "gateway": 0,
+      "routes": [
+        117,
+        118,
+        0
+      ],
+      "mean_ms": 14.358628876595745,
+      "p95_ms": 16.1325,
+      "p99_ms": 16.843375,
+      "send_lateness_p95_ms": 2.211423
+    },
+    {
+      "second": 24,
+      "offered": 237,
+      "completed": 237,
+      "gateway": 0,
+      "routes": [
+        164,
+        73,
+        0
+      ],
+      "mean_ms": 14.475473814345992,
+      "p95_ms": 16.24425,
+      "p99_ms": 17.259417,
+      "send_lateness_p95_ms": 2.247074
+    },
+    {
+      "second": 25,
+      "offered": 248,
+      "completed": 248,
+      "gateway": 0,
+      "routes": [
+        126,
+        122,
+        0
+      ],
+      "mean_ms": 14.3892915,
+      "p95_ms": 16.077708,
+      "p99_ms": 16.647791,
+      "send_lateness_p95_ms": 2.169113
+    },
+    {
+      "second": 26,
+      "offered": 226,
+      "completed": 226,
+      "gateway": 0,
+      "routes": [
+        138,
+        88,
+        0
+      ],
+      "mean_ms": 14.277422415929204,
+      "p95_ms": 15.70575,
+      "p99_ms": 16.155583,
+      "send_lateness_p95_ms": 2.141845
+    },
+    {
+      "second": 27,
+      "offered": 251,
+      "completed": 251,
+      "gateway": 0,
+      "routes": [
+        148,
+        103,
+        0
+      ],
+      "mean_ms": 14.276570075697212,
+      "p95_ms": 15.76175,
+      "p99_ms": 16.499333,
+      "send_lateness_p95_ms": 2.049596
+    },
+    {
+      "second": 28,
+      "offered": 210,
+      "completed": 210,
+      "gateway": 0,
+      "routes": [
+        118,
+        92,
+        0
+      ],
+      "mean_ms": 14.334998590476191,
+      "p95_ms": 15.767333,
+      "p99_ms": 16.319709,
+      "send_lateness_p95_ms": 2.244008
+    },
+    {
+      "second": 29,
+      "offered": 277,
+      "completed": 277,
+      "gateway": 0,
+      "routes": [
+        159,
+        118,
+        0
+      ],
+      "mean_ms": 14.278822209386282,
+      "p95_ms": 15.839458,
+      "p99_ms": 16.999916,
+      "send_lateness_p95_ms": 2.10644
+    }
+  ]
+}

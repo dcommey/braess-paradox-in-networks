@@ -1,0 +1,16 @@
+{
+  "runs": 40,
+  "paired_schedules_verified": true,
+  "offered_including_probes": 735120,
+  "completed_including_probes": 735120,
+  "queue_dropped": 0,
+  "unaccounted": 0,
+  "throttled_runs": 1,
+  "max_cohort_send_lateness_p95_ms": 29.725546,
+  "before_window_mean_range_ms": [
+    17.591116078909092,
+    33.034335910425845
+  ],
+  "activation_settled": 18,
+  "step_settled": 21
+}

@@ -1,0 +1,11 @@
+{
+  "rate": 632.0,
+  "seed": 5104,
+  "cap": 0.0,
+  "seconds": 30.0,
+  "activate": 10.0,
+  "step_at": 20.0,
+  "step_factor": 1.15,
+  "phasing": "staggered",
+  "output": "/experiment/final-batch/run-035"
+}

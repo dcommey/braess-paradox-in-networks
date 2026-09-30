@@ -1,0 +1,2 @@
+case,trace_file,requests,total_demand,gateway_slope,baseline_cost,naive_cost,aware_cost,naive_penalty,aware_penalty,cap_fraction,all_converged
+Abilene-X01-trace-calibrated,experiments/data/abilene_X01.gz,12,12.0,0.2,1.5386448190404007,1.8723807956721217,1.564598640228873,0.21690254469505216,0.016867974250651768,0.25,True

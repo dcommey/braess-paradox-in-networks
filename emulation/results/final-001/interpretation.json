@@ -1,0 +1,9 @@
+{
+  "completion_pct": 90.05839642765055,
+  "before_mean_min_ms": 13.50258280649496,
+  "before_mean_max_ms": 1570.8562810302542,
+  "total_throttled_usec": 111965529,
+  "activation_stable_runs": 24,
+  "step_stable_runs": 25,
+  "original_interpretation": "Resource-limited batch; no clean attribution of latency contrasts to chain expansion"
+}

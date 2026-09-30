@@ -1,0 +1,16 @@
+[
+  {
+    "case": "Abilene-X01-trace-calibrated",
+    "trace_file": "experiments/data/abilene_X01.gz",
+    "requests": 12,
+    "total_demand": 12.0,
+    "gateway_slope": 0.2,
+    "baseline_cost": 1.5386448190404007,
+    "naive_cost": 1.8723807956721217,
+    "aware_cost": 1.564598640228873,
+    "naive_penalty": 0.21690254469505216,
+    "aware_penalty": 0.016867974250651768,
+    "cap_fraction": 0.25,
+    "all_converged": true
+  }
+]

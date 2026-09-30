@@ -1,0 +1,6 @@
+{
+  "rate": 100,
+  "repeat": 1,
+  "cpu_before": "usage_usec 60415782\nuser_usec 55396445\nsystem_usec 5019337\nnr_periods 1406\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+  "cpu_after": "usage_usec 62213657\nuser_usec 57059397\nsystem_usec 5154260\nnr_periods 1506\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n"
+}

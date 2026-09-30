@@ -1,0 +1,12 @@
+{
+  "reference_service_ms": 0.7917016816167305,
+  "reference_pps": 1263.1020284785861,
+  "rates_pps": [
+    632,
+    884,
+    1137
+  ],
+  "source": "results/processing-002/audit.json",
+  "estimator": "Mean of three per-run service means at prespecified highest calibration rate (1200 pps). Effective busy-stage reference; service elapsed time is rate-dependent.",
+  "established_before_policy_results": true
+}

@@ -1,0 +1,252 @@
+{
+  "config": {
+    "output": "/experiment/timed-calibration",
+    "shared_service_ms": 2.0,
+    "replica_service_ms": 0.2,
+    "replica_delay_ms": 5,
+    "seed": 8001
+  },
+  "warmup_s": 5,
+  "runs": [
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 50,
+      "seconds": 20,
+      "offered": 750,
+      "completed": 750,
+      "end_to_end_ms": 17.766404608,
+      "A_service_ms": 3.292815168,
+      "A_served_per_s": 50.0,
+      "D_service_ms": 1.1436089453333333,
+      "D_served_per_s": 50.0,
+      "stage_sojourn_ms": {
+        "A": 3.8030931613333334,
+        "D": 1.224151116
+      },
+      "overhead_ms": 12.739160330666664,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 100,
+      "seconds": 20,
+      "offered": 1508,
+      "completed": 1508,
+      "end_to_end_ms": 18.34380172214854,
+      "A_service_ms": 3.352098797745358,
+      "A_served_per_s": 100.53333333333333,
+      "D_service_ms": 1.114204727453581,
+      "D_served_per_s": 100.53333333333333,
+      "stage_sojourn_ms": {
+        "A": 4.642166582891247,
+        "D": 1.1845563899204243
+      },
+      "overhead_ms": 12.51707874933687,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 200,
+      "seconds": 20,
+      "offered": 3048,
+      "completed": 3048,
+      "end_to_end_ms": 19.91577531430446,
+      "A_service_ms": 3.1756003959973755,
+      "A_served_per_s": 203.2,
+      "D_service_ms": 1.0332557641076114,
+      "D_served_per_s": 203.2,
+      "stage_sojourn_ms": {
+        "A": 6.720569817913386,
+        "D": 1.0919975524934382
+      },
+      "overhead_ms": 12.103207943897637,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 300,
+      "seconds": 20,
+      "offered": 4563,
+      "completed": 4563,
+      "end_to_end_ms": 53.34194067411791,
+      "A_service_ms": 3.119635475783476,
+      "A_served_per_s": 304.2,
+      "D_service_ms": 1.010098063554679,
+      "D_served_per_s": 304.2,
+      "stage_sojourn_ms": {
+        "A": 40.26650227810651,
+        "D": 1.0624374168310322
+      },
+      "overhead_ms": 12.013000979180369,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 350,
+      "seconds": 20,
+      "offered": 5319,
+      "completed": 4994,
+      "end_to_end_ms": 1324.8039223946737,
+      "A_service_ms": 3.1149499136964356,
+      "A_served_per_s": 332.93333333333334,
+      "D_service_ms": 0.993410087505006,
+      "D_served_per_s": 332.93333333333334,
+      "stage_sojourn_ms": {
+        "A": 1311.7299485971166,
+        "D": 1.0462434469363235
+      },
+      "overhead_ms": 12.027730350620686,
+      "throttled_usec": 0,
+      "drops": 325
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 400,
+      "seconds": 20,
+      "offered": 6085,
+      "completed": 4829,
+      "end_to_end_ms": 1618.4590276792296,
+      "A_service_ms": 3.1136727345206046,
+      "A_served_per_s": 321.93333333333334,
+      "D_service_ms": 0.9790568645682336,
+      "D_served_per_s": 321.93333333333334,
+      "stage_sojourn_ms": {
+        "A": 1605.4760318898323,
+        "D": 1.027505967695175
+      },
+      "overhead_ms": 11.955489821702258,
+      "throttled_usec": 0,
+      "drops": 1256
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 425,
+      "seconds": 20,
+      "offered": 6473,
+      "completed": 4731,
+      "end_to_end_ms": 1647.483579077362,
+      "A_service_ms": 3.126231471147749,
+      "A_served_per_s": 315.4,
+      "D_service_ms": 0.9849115753540477,
+      "D_served_per_s": 315.4,
+      "stage_sojourn_ms": {
+        "A": 1634.4508293003594,
+        "D": 1.0354002107376876
+      },
+      "overhead_ms": 11.99734956626503,
+      "throttled_usec": 0,
+      "drops": 1742
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 450,
+      "seconds": 20,
+      "offered": 6783,
+      "completed": 4641,
+      "end_to_end_ms": 1662.0501375563456,
+      "A_service_ms": 3.1458489071320836,
+      "A_served_per_s": 309.4,
+      "D_service_ms": 0.9914218575737987,
+      "D_served_per_s": 309.4,
+      "stage_sojourn_ms": {
+        "A": 1648.95457505947,
+        "D": 1.0475330316742082
+      },
+      "overhead_ms": 12.048029465201353,
+      "throttled_usec": 0,
+      "drops": 2390
+    },
+    {
+      "kind": "curve",
+      "route": 0,
+      "rate": 475,
+      "seconds": 20,
+      "offered": 7154,
+      "completed": 4644,
+      "end_to_end_ms": 1668.6221747958657,
+      "A_service_ms": 3.1650683951335057,
+      "A_served_per_s": 309.6,
+      "D_service_ms": 1.0393317517226528,
+      "D_served_per_s": 309.6,
+      "stage_sojourn_ms": {
+        "A": 1655.4906690717055,
+        "D": 1.1006103363479758
+      },
+      "overhead_ms": 12.03089538781228,
+      "throttled_usec": 0,
+      "drops": 2838
+    },
+    {
+      "kind": "route",
+      "route": 0,
+      "rate": 20,
+      "seconds": 15,
+      "offered": 181,
+      "completed": 181,
+      "end_to_end_ms": 17.856082889502762,
+      "A_service_ms": 3.4691082044198893,
+      "A_served_per_s": 18.1,
+      "D_service_ms": 1.1758662541436464,
+      "D_served_per_s": 18.1,
+      "stage_sojourn_ms": {
+        "A": 3.7497012044198894,
+        "D": 1.2740294640883978
+      },
+      "overhead_ms": 12.832352220994474,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "route",
+      "route": 1,
+      "rate": 20,
+      "seconds": 15,
+      "offered": 178,
+      "completed": 178,
+      "end_to_end_ms": 18.206305061797753,
+      "B_service_ms": 3.374197061797753,
+      "B_served_per_s": 17.8,
+      "C_service_ms": 1.3003862359550562,
+      "C_served_per_s": 17.8,
+      "stage_sojourn_ms": {
+        "B": 3.629415949438202,
+        "C": 1.4657111629213484
+      },
+      "overhead_ms": 13.111177949438202,
+      "throttled_usec": 0,
+      "drops": 0
+    },
+    {
+      "kind": "route",
+      "route": 2,
+      "rate": 20,
+      "seconds": 15,
+      "offered": 204,
+      "completed": 204,
+      "end_to_end_ms": 8.067859039215687,
+      "A_service_ms": 3.4551160343137255,
+      "A_served_per_s": 20.4,
+      "B_service_ms": 3.4980224705882352,
+      "B_served_per_s": 20.4,
+      "stage_sojourn_ms": {
+        "A": 3.749412799019608,
+        "B": 3.6149754656862747
+      },
+      "overhead_ms": 0.703470774509805,
+      "throttled_usec": 0,
+      "drops": 0
+    }
+  ]
+}
