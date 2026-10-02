@@ -1,4 +1,4 @@
-# Braess-Aware Security-Service Chain Orchestration
+# Braess Effects and Gateway-Exposure Screening in Decentralized Security-Service Chain Routing
 
 Experiment code and retained results for the routing-game analysis, gateway-exposure screening, fixed-placement load-aware comparison, and packet-level emulation.
 
