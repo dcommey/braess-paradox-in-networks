@@ -27,3 +27,4 @@ generated/
 **/*.jsonl
 **/*.jsonl.gz
 **/__pycache__/
+TNSM_submission_source.zip

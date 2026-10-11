@@ -7,7 +7,7 @@ import gzip
 from math import sqrt
 from pathlib import Path
 from random import Random
-from statistics import mean, stdev
+from statistics import mean, median, stdev
 from time import perf_counter
 
 from .metrics import paradox_penalty
@@ -19,7 +19,7 @@ from .topology_sfc import (
     build_topology_sfc_model,
     gateway_share,
     load_hhi,
-    maximum_affected_demand_share,
+    maximum_normalized_resource_load,
     normalized_load_entropy,
     single_resource_removal_loss,
 )
@@ -74,6 +74,8 @@ def run_monte_carlo(instances: int = 1000, seed: int = 20260711, max_penalty: fl
             "gateway_slope": params["gateway_slope"],
             "gateway_capacity_factor": params["gateway_capacity_factor"],
             "shared_slope_factor": params["shared_slope_factor"],
+            "gateway_risk": params["gateway_risk"],
+            "gateway_exposure": params["gateway_exposure"],
             "gateway_site_index": params["gateway_site_index"],
             "vnf_site_offset": params["vnf_site_offset"],
             "distributed_delay": params["distributed_delay"],
@@ -92,10 +94,15 @@ def run_monte_carlo(instances: int = 1000, seed: int = 20260711, max_penalty: fl
             "aware_hhi": load_hhi(expanded_model, aware),
             "naive_entropy": normalized_load_entropy(expanded_model, naive),
             "aware_entropy": normalized_load_entropy(expanded_model, aware),
-            "naive_max_affected_share": maximum_affected_demand_share(expanded_model, naive),
-            "aware_max_affected_share": maximum_affected_demand_share(expanded_model, aware),
+            "naive_max_normalized_resource_load": maximum_normalized_resource_load(expanded_model, naive),
+            "aware_max_normalized_resource_load": maximum_normalized_resource_load(expanded_model, aware),
             "naive_removal_loss": single_resource_removal_loss(expanded_model, naive),
             "aware_removal_loss": single_resource_removal_loss(expanded_model, aware),
+            "screen_equilibrium_solves": next(
+                index for index, fraction in enumerate(
+                    (1.0, 0.75, 0.5, 0.35, 0.25, 0.15, 0.1, 0.0), start=1
+                ) if abs(fraction - float(_cap_fraction(expanded_model, caps))) < 1e-9
+            ),
             "baseline_converged": baseline.converged,
             "naive_converged": naive.converged,
             "aware_converged": aware.converged,
@@ -115,6 +122,14 @@ def summarize_monte_carlo(rows: list[dict[str, object]]) -> dict[str, object]:
     success = len(mitigated) / len(paradox_rows) if paradox_rows else 0.0
     runtimes = [float(row["screen_runtime_ms"]) for row in rows]
     penalties = [float(row["naive_penalty"]) for row in rows]
+    paradox_caps = [float(row["cap_fraction"]) for row in paradox_rows]
+    paradox_shares = [float(row["aware_gateway_share"]) for row in paradox_rows]
+    positive_caps = [value for value in paradox_caps if value > 0.0]
+    reductions = [
+        float(row["naive_penalty"]) - float(row["aware_penalty"])
+        for row in paradox_rows
+    ]
+    solves = [int(row["screen_equilibrium_solves"]) for row in rows]
     return {
         "instances_attempted": attempted,
         "instances": n,
@@ -125,12 +140,22 @@ def summarize_monte_carlo(rows: list[dict[str, object]]) -> dict[str, object]:
         "paradox_prevalence_ci95": _wilson(len(paradox_rows), n),
         "mitigation_success": success,
         "mitigation_success_ci95": _wilson(len(mitigated), len(paradox_rows)),
+        "positive_cap_instances": len(positive_caps),
+        "positive_cap_rate": len(positive_caps) / len(paradox_rows) if paradox_rows else 0.0,
+        "zero_cap_instances": len(paradox_caps) - len(positive_caps),
+        "zero_cap_rate": 1.0 - len(positive_caps) / len(paradox_rows) if paradox_rows else 0.0,
+        "mean_selected_cap": mean(paradox_caps) if paradox_caps else 0.0,
+        "median_selected_cap": median(paradox_caps) if paradox_caps else 0.0,
+        "mean_selected_gateway_share": mean(paradox_shares) if paradox_shares else 0.0,
+        "median_selected_gateway_share": median(paradox_shares) if paradox_shares else 0.0,
+        "mean_penalty_reduction": mean(reductions) if reductions else 0.0,
+        "mean_screen_equilibrium_solves": mean(solves) if solves else 0.0,
         "mean_naive_penalty": mean(penalties) if penalties else 0.0,
         "mean_naive_penalty_ci95": _mean_ci(penalties),
         "mean_screen_runtime_ms": mean(runtimes) if runtimes else 0.0,
         "mean_screen_runtime_ci95": _mean_ci(runtimes),
-        "median_screen_runtime_ms": sorted(runtimes)[n // 2] if n else 0.0,
-        "cap_distribution": dict(sorted(Counter(f"{float(row['cap_fraction']):.2f}" for row in rows).items())),
+        "median_screen_runtime_ms": median(runtimes) if runtimes else 0.0,
+        "cap_distribution": dict(sorted(Counter(f"{value:.2f}" for value in paradox_caps).items())),
         "convergence_rate": n / attempted if attempted else 0.0,
     }
 

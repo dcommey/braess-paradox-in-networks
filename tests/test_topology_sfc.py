@@ -4,6 +4,7 @@ from security_braess.topology import nsfnet
 from security_braess.topology_sfc import (
     build_topology_sfc_model, evaluate_topology_suite, summarize_evaluations,
     load_hhi, normalized_load_entropy, single_resource_removal_loss,
+    maximum_normalized_resource_load,
 )
 from security_braess.multicommodity import solve_multicommodity_equilibrium, solve_nonlinear_equilibrium
 
@@ -55,6 +56,8 @@ class TopologySfcTest(unittest.TestCase):
         self.assertGreaterEqual(normalized_load_entropy(model, result), 0.0)
         self.assertLessEqual(normalized_load_entropy(model, result), 1.0)
         self.assertGreaterEqual(single_resource_removal_loss(model, result), 0.0)
+        self.assertLessEqual(single_resource_removal_loss(model, result), 1.0)
+        self.assertGreaterEqual(maximum_normalized_resource_load(model, result), 0.0)
 
 
 if __name__ == "__main__":

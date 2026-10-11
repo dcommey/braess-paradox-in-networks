@@ -7,7 +7,7 @@ import gzip
 from math import sqrt
 from pathlib import Path
 from random import Random
-from statistics import mean, stdev
+from statistics import mean, median, stdev
 from time import perf_counter
 
 from .metrics import paradox_penalty
@@ -145,16 +145,16 @@ def summarize_monte_carlo(rows: list[dict[str, object]]) -> dict[str, object]:
         "zero_cap_instances": len(paradox_caps) - len(positive_caps),
         "zero_cap_rate": 1.0 - len(positive_caps) / len(paradox_rows) if paradox_rows else 0.0,
         "mean_selected_cap": mean(paradox_caps) if paradox_caps else 0.0,
-        "median_selected_cap": sorted(paradox_caps)[len(paradox_caps) // 2] if paradox_caps else 0.0,
+        "median_selected_cap": median(paradox_caps) if paradox_caps else 0.0,
         "mean_selected_gateway_share": mean(paradox_shares) if paradox_shares else 0.0,
-        "median_selected_gateway_share": sorted(paradox_shares)[len(paradox_shares) // 2] if paradox_shares else 0.0,
+        "median_selected_gateway_share": median(paradox_shares) if paradox_shares else 0.0,
         "mean_penalty_reduction": mean(reductions) if reductions else 0.0,
         "mean_screen_equilibrium_solves": mean(solves) if solves else 0.0,
         "mean_naive_penalty": mean(penalties) if penalties else 0.0,
         "mean_naive_penalty_ci95": _mean_ci(penalties),
         "mean_screen_runtime_ms": mean(runtimes) if runtimes else 0.0,
         "mean_screen_runtime_ci95": _mean_ci(runtimes),
-        "median_screen_runtime_ms": sorted(runtimes)[n // 2] if n else 0.0,
+        "median_screen_runtime_ms": median(runtimes) if runtimes else 0.0,
         "cap_distribution": dict(sorted(Counter(f"{value:.2f}" for value in paradox_caps).items())),
         "convergence_rate": n / attempted if attempted else 0.0,
     }

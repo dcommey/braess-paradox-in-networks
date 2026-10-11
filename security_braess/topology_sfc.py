@@ -272,7 +272,15 @@ def normalized_load_entropy(model: MultiServiceModel, result: MCEquilibriumResul
     return -sum((value / total) * log(value / total) for value in positive) / log(len(positive))
 
 
-def maximum_affected_demand_share(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
+def maximum_normalized_resource_load(model: MultiServiceModel, result: MCEquilibriumResult) -> float:
+    """Largest resource load divided by total offered demand.
+
+    This is a load-intensity measure, not an affected-demand share: a path may
+    traverse the same substrate resource more than once, so the ratio can
+    exceed one. Use ``single_resource_removal_loss`` for the fraction of
+    unique demand affected by removing one resource.
+    """
+
     return max((load / model.total_demand for load in result.loads.values()), default=0.0)
 
 
@@ -367,7 +375,7 @@ def summarize_evaluations(evaluations: list[PolicyEvaluation]) -> list[dict[str,
                 "risk_concentration": risk_concentration_index(evaluation.model, evaluation.result),
                 "load_hhi": load_hhi(evaluation.model, evaluation.result),
                 "load_entropy": normalized_load_entropy(evaluation.model, evaluation.result),
-                "max_affected_share": maximum_affected_demand_share(evaluation.model, evaluation.result),
+                "max_normalized_resource_load": maximum_normalized_resource_load(evaluation.model, evaluation.result),
                 "single_resource_removal_loss": single_resource_removal_loss(evaluation.model, evaluation.result),
                 "expected_attack_loss": expected_attack_loss(evaluation.model, evaluation.result),
                 "weighted_attack_loss": weighted_attack_loss(evaluation.model, evaluation.result),

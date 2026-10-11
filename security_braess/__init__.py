@@ -1,4 +1,4 @@
-"""Security-induced Braess paradox models and experiments."""
+"""Braess-aware security-service orchestration models and experiments."""
 
 from .model import Resource
 from .multicommodity import MCEquilibriumResult, MCPath, MultiServiceModel, Request
